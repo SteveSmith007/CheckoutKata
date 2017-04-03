@@ -6,7 +6,7 @@ namespace CheckoutKata
 {
     public class Checkout : ICheckout
     {
-        private IRepository _repository;
+        private readonly IRepository _repository;
 
         public Checkout(IRepository repository = null)
         {

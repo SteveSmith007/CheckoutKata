@@ -50,7 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CheckoutSingleUnits.cs" />
+    <Compile Include="RegisterMultipleUnits.cs" />
+    <Compile Include="RegisterSingleUnits.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
