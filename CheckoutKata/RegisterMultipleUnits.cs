@@ -79,5 +79,17 @@ namespace CheckoutKataTests
             Assert.AreEqual(45M, checkout.Total);
         }
 
+        [TestMethod]
+        public void OneBThenOneAThenOneBGivesTotalOf95()
+        {
+            var checkout = new CheckoutKata.Checkout();
+
+            checkout.Register("B");
+            checkout.Register("A");
+            checkout.Register("B");
+
+            Assert.AreEqual(95M, checkout.Total);
+        }
+
     }
 }
