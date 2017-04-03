@@ -16,5 +16,15 @@ namespace CheckoutKataTests
 
             Assert.AreEqual(50M, checkout.Total);
         }
+
+        [TestMethod]
+        public void OneBGivesTotalOf30()
+        {
+            var checkout = new Checkout();
+
+            checkout.Register("B");
+
+            Assert.AreEqual(30M, checkout.Total);
+        }
     }
 }
