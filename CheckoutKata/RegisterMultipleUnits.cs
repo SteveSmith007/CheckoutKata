@@ -12,9 +12,8 @@ namespace CheckoutKata
 
             checkout.Register("A");
             checkout.Register("A");
-            checkout.Register("A");
 
-            Assert.AreEqual(130M, checkout.Total);
+            Assert.AreEqual(100M, checkout.Total);
         }
 
         [TestMethod]
