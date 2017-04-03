@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using Checkout;
+using Checkout.Interfaces;
 
-namespace CheckoutKata
+namespace Checkout.Concrete
 {
     public class Checkout : ICheckout
     {

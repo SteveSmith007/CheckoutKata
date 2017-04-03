@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Checkout.Models;
 
-namespace Checkout
+namespace Checkout.Interfaces
 {
     public interface IRepository
     {

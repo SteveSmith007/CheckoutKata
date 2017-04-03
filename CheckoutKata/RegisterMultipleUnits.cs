@@ -1,8 +1,6 @@
-﻿using System;
-using CheckoutKata;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CheckoutKataTests
+namespace CheckoutKata
 {
     [TestClass]
     public class CheckoutMultipleUnits
@@ -10,7 +8,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void TwoAGivesTotalOf100()
         {
-            var checkout = new CheckoutKata.Checkout(new TestRepository());
+            var checkout = new Checkout.Concrete.Checkout(new TestRepository());
 
             checkout.Register("A");
             checkout.Register("A");
@@ -22,7 +20,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void ThreeAGivesTotalOf130()
         {
-            var checkout = new CheckoutKata.Checkout(new TestRepository());
+            var checkout = new Checkout.Concrete.Checkout(new TestRepository());
 
             checkout.Register("A");
             checkout.Register("A");
@@ -34,7 +32,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void FourAGivesTotalOf180()
         {
-            var checkout = new CheckoutKata.Checkout(new TestRepository());
+            var checkout = new Checkout.Concrete.Checkout(new TestRepository());
 
             checkout.Register("A");
             checkout.Register("A");
@@ -47,7 +45,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void SixAGivesTotalOf260()
         {
-            var checkout = new CheckoutKata.Checkout(new TestRepository());
+            var checkout = new Checkout.Concrete.Checkout(new TestRepository());
 
             checkout.Register("A");
             checkout.Register("A");
@@ -62,7 +60,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void SixAAtOnceGivesTotalOf260()
         {
-            var checkout = new CheckoutKata.Checkout(new TestRepository());
+            var checkout = new Checkout.Concrete.Checkout(new TestRepository());
 
             checkout.Register("A", 6);
 
@@ -72,7 +70,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void TwoBAtOnceGivesTotalOf45()
         {
-            var checkout = new CheckoutKata.Checkout(new TestRepository());
+            var checkout = new Checkout.Concrete.Checkout(new TestRepository());
 
             checkout.Register("B", 2);
 
@@ -82,7 +80,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void OneBThenOneAThenOneBGivesTotalOf95()
         {
-            var checkout = new CheckoutKata.Checkout(new TestRepository());
+            var checkout = new Checkout.Concrete.Checkout(new TestRepository());
 
             checkout.Register("B");
             checkout.Register("A");
@@ -94,7 +92,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void ComplexTest()
         {
-            var checkout = new CheckoutKata.Checkout(new TestRepository());
+            var checkout = new Checkout.Concrete.Checkout(new TestRepository());
 
             checkout.Register("A");
             checkout.Register("B");

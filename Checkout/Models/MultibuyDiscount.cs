@@ -1,4 +1,4 @@
-﻿namespace Checkout
+﻿namespace Checkout.Models
 {
     public class MultibuyDiscount
     {

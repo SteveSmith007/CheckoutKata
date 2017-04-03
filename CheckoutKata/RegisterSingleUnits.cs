@@ -1,8 +1,6 @@
-﻿using System;
-using CheckoutKata;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CheckoutKataTests
+namespace CheckoutKata
 {
     [TestClass]
     public class CheckoutSingleUnits
@@ -10,7 +8,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void OneAGivesTotalOf50()
         {
-            var checkout = new CheckoutKata.Checkout(new TestRepository());
+            var checkout = new Checkout.Concrete.Checkout(new TestRepository());
 
             checkout.Register("A");
 
@@ -20,7 +18,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void OneBGivesTotalOf30()
         {
-            var checkout = new CheckoutKata.Checkout(new TestRepository());
+            var checkout = new Checkout.Concrete.Checkout(new TestRepository());
 
             checkout.Register("B");
 
@@ -30,7 +28,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void OneCGivesTotalOf20()
         {
-            var checkout = new CheckoutKata.Checkout(new TestRepository());
+            var checkout = new Checkout.Concrete.Checkout(new TestRepository());
 
             checkout.Register("C");
 
@@ -40,7 +38,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void OneDGivesTotalOf15()
         {
-            var checkout = new CheckoutKata.Checkout(new TestRepository());
+            var checkout = new Checkout.Concrete.Checkout(new TestRepository());
 
             checkout.Register("D");
 
