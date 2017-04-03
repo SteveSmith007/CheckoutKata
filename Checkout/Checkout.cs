@@ -21,7 +21,10 @@ namespace CheckoutKata
             {
                 var subTotal = _items.Sum(item => _repository.FindPrice(item));
 
-                var discount = (_items.Count(i => i.Equals("A")) / 3)*20;
+                var discount = 0;
+
+                discount += (_items.Count(i => i.Equals("A")) / 3) * 20;
+                discount += (_items.Count(i => i.Equals("B")) / 2) * 15;
 
                 return subTotal - discount;
             }

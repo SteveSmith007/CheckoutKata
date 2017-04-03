@@ -69,5 +69,15 @@ namespace CheckoutKataTests
             Assert.AreEqual(260M, checkout.Total);
         }
 
+        [TestMethod]
+        public void TwoBAtOnceGivesTotalOf45()
+        {
+            var checkout = new CheckoutKata.Checkout();
+
+            checkout.Register("B", 2);
+
+            Assert.AreEqual(45M, checkout.Total);
+        }
+
     }
 }

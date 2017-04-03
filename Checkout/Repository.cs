@@ -10,6 +10,7 @@ namespace Checkout
     public class Repository : IRepository
     {
         private readonly Dictionary<string, decimal> _catalogue;
+
         public Repository()
         {
             _catalogue = new Dictionary<string, decimal>()
