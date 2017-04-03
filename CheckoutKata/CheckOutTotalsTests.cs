@@ -7,8 +7,13 @@ namespace CheckoutKata
     public class CheckOutTotalsTests
     {
         [TestMethod]
-        public void OnAGivesTotalOf50()
+        public void OneAGivesTotalOf50()
         {
+            var checkout = new Checkout();
+
+            checkout.Register("A");
+
+            Assert.AreEqual(50M, checkout.Total);
         }
     }
 }
