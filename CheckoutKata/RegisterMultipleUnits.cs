@@ -91,5 +91,20 @@ namespace CheckoutKataTests
             Assert.AreEqual(95M, checkout.Total);
         }
 
+        [TestMethod]
+        public void ComplexTest()
+        {
+            var checkout = new CheckoutKata.Checkout();
+
+            checkout.Register("A");
+            checkout.Register("B");
+            checkout.Register("C");
+            checkout.Register("D");
+            checkout.Register("A", 3);
+            checkout.Register("B", 4);
+
+            Assert.AreEqual(335M, checkout.Total);
+        }
+
     }
 }

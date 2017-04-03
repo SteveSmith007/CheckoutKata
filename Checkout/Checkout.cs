@@ -19,14 +19,9 @@ namespace CheckoutKata
         {
             get
             {
-                var subTotal = _items.Sum(item => _repository.FindPrice(item));
-
-                var discount = 0;
-
-                discount += (_items.Count(i => i.Equals("A")) / 3) * 20;
-                discount += (_items.Count(i => i.Equals("B")) / 2) * 15;
-
-                return subTotal - discount;
+                return _items.Sum(item => _repository.FindSku(item).Price)
+                    -_repository.MultibuyDiscounts.Sum(multibuyDiscount => 
+                        (_items.Count(i => i.Equals(multibuyDiscount.Sku))/multibuyDiscount.Qty)*multibuyDiscount.Discount);
             }
         }
 

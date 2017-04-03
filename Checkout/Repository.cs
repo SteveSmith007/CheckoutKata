@@ -9,22 +9,66 @@ namespace Checkout
 {
     public class Repository : IRepository
     {
-        private readonly Dictionary<string, decimal> _catalogue;
+        private readonly IList<Sku> _catalogue;
+        private readonly IList<MultibuyDiscount> _multibuyDiscounts;
 
         public Repository()
         {
-            _catalogue = new Dictionary<string, decimal>()
+            _catalogue = new List<Sku>()
             {
-                {"A", 50},
-                {"B", 30},
-                {"C", 20},
-                {"D", 15},
+                new Sku("A", 50),
+                new Sku("B", 30),
+                new Sku("C", 20),
+                new Sku("D", 15)
             };
+
+            _multibuyDiscounts = new List<MultibuyDiscount>()
+            {
+                new MultibuyDiscount("A", 3, 20),
+                new MultibuyDiscount("B", 2, 15),
+            };
+        }
+        
+
+        public Sku FindSku(string code)
+        {
+            return _catalogue.FirstOrDefault(s => s.Code == code);
+        }
+
+        public IList<MultibuyDiscount> MultibuyDiscounts
+        {
+            get { return _multibuyDiscounts; }
         }
 
         public decimal FindPrice(string code)
         {
-            return _catalogue[code];
+            return FindSku(code).Price;
         }
+    }
+
+    public class Sku
+    {
+        public Sku(string code, decimal price)
+        {
+            Code = code;
+            Price = price;
+        }
+
+        public string Code { get; }
+        public decimal Price { get; }
+    }
+
+    public class MultibuyDiscount
+    {
+        public MultibuyDiscount(string sku, int qty, decimal discount)
+        {
+            Sku = sku;
+            Qty = qty;
+            Discount = discount;
+        }
+
+        public string Sku { get; }
+        public int Qty { get; }
+        public decimal Discount { get; }
     }
 }
