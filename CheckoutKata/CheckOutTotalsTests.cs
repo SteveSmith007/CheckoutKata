@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CheckoutKata
 {
     [TestClass]
-    public class UnitTest1
+    public class CheckOutTotalsTests
     {
         [TestMethod]
         public void OnAGivesTotalOf50()
