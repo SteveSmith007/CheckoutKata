@@ -59,5 +59,15 @@ namespace CheckoutKataTests
             Assert.AreEqual(260M, checkout.Total);
         }
 
+        [TestMethod]
+        public void SixAAtOnceGivesTotalOf260()
+        {
+            var checkout = new CheckoutKata.Checkout();
+
+            checkout.Register("A", 6);
+
+            Assert.AreEqual(260M, checkout.Total);
+        }
+
     }
 }

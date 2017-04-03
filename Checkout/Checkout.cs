@@ -29,9 +29,10 @@ namespace CheckoutKata
 
         private readonly IList<string> _items;
 
-        public void Register(string code)
+        public void Register(string code, int qty = 1)
         {
-            _items.Add(code);
+            for (var i = 1; i <= qty; i++)
+                _items.Add(code);
         }
     }
 }
