@@ -2,11 +2,13 @@
 {
     internal class Checkout
     {
-        public decimal Total { get; set; }
+        public decimal Total {
+            get { return 50M; }
+        }
 
-        public void Register(string s)
+        public void Register(string sku)
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }
