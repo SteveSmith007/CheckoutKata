@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Checkout;
 
 namespace CheckoutKata
@@ -10,19 +11,27 @@ namespace CheckoutKata
 
         public Checkout(IRepository repository = null)
         {
+            _items = new List<string>();
             _repository = repository ?? new Repository();
         }
 
         public decimal Total
         {
-            get { return _total; }
+            get
+            {
+                var subTotal = _items.Sum(item => _repository.FindPrice(item));
+
+                var discount = (_items.Count(i => i.Equals("A")) / 3)*20;
+
+                return subTotal - discount;
+            }
         }
 
-        private decimal _total;
+        private readonly IList<string> _items;
 
         public void Register(string code)
         {
-            _total += _repository.FindPrice(code);
+            _items.Add(code);
         }
     }
 }
