@@ -19,7 +19,9 @@ namespace Checkout
             _catalogue = new Dictionary<string, decimal>()
             {
                 {"A", 50},
-                {"B", 30}
+                {"B", 30},
+                {"C", 20},
+                {"D", 15},
             };
         }
 
