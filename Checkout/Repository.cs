@@ -7,10 +7,6 @@ using System.Threading.Tasks;
 
 namespace Checkout
 {
-    public interface IRepository
-    {
-        decimal FindPrice(string code);
-    }
     public class Repository : IRepository
     {
         private readonly Dictionary<string, decimal> _catalogue;

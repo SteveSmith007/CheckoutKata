@@ -4,10 +4,10 @@ using Checkout;
 
 namespace CheckoutKata
 {
-    public class Checkout
+    public class Checkout : ICheckout
     {
         private IRepository _repository;
-        
+
         public Checkout(IRepository repository = null)
         {
             _repository = repository ?? new Repository();
@@ -19,11 +19,10 @@ namespace CheckoutKata
         }
 
         private decimal _total;
-        
+
         public void Register(string code)
         {
             _total += _repository.FindPrice(code);
         }
-
     }
 }

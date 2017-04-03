@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckoutKata", "CheckoutKata.csproj", "{C3E0F608-A072-45FF-8F91-909E457C50DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckoutKataTests", "CheckoutKataTests.csproj", "{C3E0F608-A072-45FF-8F91-909E457C50DA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkout", "..\Checkout\Checkout.csproj", "{FB2B167C-B545-4C78-BE92-B7813827D885}"
 EndProject

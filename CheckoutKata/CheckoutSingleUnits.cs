@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CheckoutKataTests
 {
     [TestClass]
-    public class CheckOutTotalsTests
+    public class CheckoutSingleUnits
     {
         [TestMethod]
         public void OneAGivesTotalOf50()
