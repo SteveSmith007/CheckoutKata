@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Checkout
+﻿namespace CheckoutKata
 {
     public class Checkout
     {
+        public decimal Total {
+            get { return 50M; }
+        }
+
+        public void Register(string sku)
+        {
+            
+        }
     }
 }

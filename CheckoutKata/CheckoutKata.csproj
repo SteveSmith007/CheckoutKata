@@ -50,9 +50,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Checkout.cs" />
     <Compile Include="CheckOutTotalsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Checkout\Checkout.csproj">
+      <Project>{fb2b167c-b545-4c78-be92-b7813827d885}</Project>
+      <Name>Checkout</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -1,7 +1,8 @@
 ﻿using System;
+using CheckoutKata;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CheckoutKata
+namespace CheckoutKataTests
 {
     [TestClass]
     public class CheckOutTotalsTests
