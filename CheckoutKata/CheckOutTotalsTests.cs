@@ -10,7 +10,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void OneAGivesTotalOf50()
         {
-            var checkout = new Checkout();
+            var checkout = new CheckoutKata.Checkout();
 
             checkout.Register("A");
 
@@ -20,7 +20,7 @@ namespace CheckoutKataTests
         [TestMethod]
         public void OneBGivesTotalOf30()
         {
-            var checkout = new Checkout();
+            var checkout = new CheckoutKata.Checkout();
 
             checkout.Register("B");
 

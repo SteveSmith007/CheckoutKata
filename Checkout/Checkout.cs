@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using Checkout;
 
 namespace CheckoutKata
 {
     public class Checkout
     {
-        private Dictionary<string, decimal> _catalogue;
-
-        public Checkout()
+        private IRepository _repository;
+        
+        public Checkout(IRepository repository = null)
         {
-            _catalogue = new Dictionary<string, decimal>()
-            {
-                {"A", 50},
-                {"B", 30}
-            };
+            _repository = repository ?? new Repository();
         }
 
         public decimal Total
@@ -23,9 +20,9 @@ namespace CheckoutKata
 
         private decimal _total;
         
-        public void Register(string sku)
+        public void Register(string code)
         {
-            _total += _catalogue[sku];
+            _total += _repository.FindPrice(code);
         }
 
     }
